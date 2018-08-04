@@ -35,7 +35,7 @@ func main() {
 		//content-type为application/json且请求为'{"key":"value"}'形式(注意json是有数据类型)成功了，注意最外面是单引号而不是`
 		v1.POST("/login", pkg.DemoParamBinding)
 		//用bind绑定参数，自动推断是bind表单还是json的参数
-		v1.POST("loginwithbind", pkg.DemoWithBind)
+		v1.POST("/loginwithbind", pkg.DemoWithBind)
 		//多格式渲染c.XML,响应也可以使用不同的content-type,通常有html,text,json,xml,plain等
 		v1.GET("/render",pkg.DemoWithXML)
 		//重定向的请求
